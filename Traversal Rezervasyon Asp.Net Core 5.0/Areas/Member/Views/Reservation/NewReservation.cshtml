@@ -1,0 +1,31 @@
+﻿@model Reservation
+
+@{
+    ViewData["Title"] = "NewReservation";
+    Layout = "~/Areas/Member/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Yeni Rezervasyon Sayfası</h1>
+
+<form method="post" asp-action="NewReservation" asp-controller="Reservation" asp-area="Member">
+
+    <label>Lokasyon</label>
+    <select asp-items=@ViewBag.Values asp-for="Destination" class="form-control"></select>
+    <br />
+
+    <label>Kişi Sayısı</label>
+    <input type="text" class="form-control" asp-for="PersonCount" />
+    <br />
+
+    <label>Tarih</label>
+    <input type="date" class="form-control" asp-for="ReservationDate" />
+    <br />
+
+    <label>Not</label>
+    <textarea class="form-control" asp-for="Description"></textarea>
+    <br />
+
+    <button class="btn btn-sm btn-outline-dark">Rezervasyon Oluştur</button>
+
+</form>
+

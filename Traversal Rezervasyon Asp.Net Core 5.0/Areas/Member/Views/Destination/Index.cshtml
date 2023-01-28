@@ -1,0 +1,46 @@
+﻿@model List<Destination>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Aktif Tur Rotaları</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">#</th>
+                                <td class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ŞEHİR</td>
+                                <td class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Süre</td>
+                                <td class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">KAPASİTE</td>
+                                <td class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">FİYAT</td>
+                                <td class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Detaylar</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td><div class="d-flex px-2 py-1"><div><img src="@item.Image" class="avatar avatar-sm me-3"></div></div></td>
+                                    <td><p class="text-xs font-weight-bold mb-0">@item.City</p></td>
+                                    <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0"> @item.DayNight</p></td>
+                                    <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0"> @item.Capacity</p></td>
+                                    <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0"> @item.Price ₺</p></td>
+                                    <td class="align-middle text-center text-sm"><a href="#" class="btn btn-info">Detaylar</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
