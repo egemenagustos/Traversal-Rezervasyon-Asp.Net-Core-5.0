@@ -11,7 +11,7 @@ namespace DataAccessLayer.Abstract
     {
         void Insert(T t);
 
-        void Delete (int id);
+        void Delete (T t);
 
         void Update (T t);
 

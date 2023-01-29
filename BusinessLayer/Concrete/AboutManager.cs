@@ -33,9 +33,9 @@ namespace BusinessLayer.Concrete
             _aboutDal.Insert(t);
         }
 
-        public void TRemove(int id)
+        public void TRemove(About t)
         {
-            _aboutDal.Delete(id);
+            throw new NotImplementedException();
         }
 
         public void TUpdate(About t)

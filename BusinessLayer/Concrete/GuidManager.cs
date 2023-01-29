@@ -25,22 +25,22 @@ namespace BusinessLayer.Concrete
 
         public Guide GetById(int id)
         {
-            throw new NotImplementedException();
+           return _guideDal.GetById(id);
         }
 
         public void TAdd(Guide t)
         {
-            throw new NotImplementedException();
+            _guideDal.Insert(t);
         }
 
-        public void TRemove(int id)
+        public void TRemove(Guide t)
         {
-            throw new NotImplementedException();
+            _guideDal.Delete(t);
         }
 
         public void TUpdate(Guide t)
         {
-            throw new NotImplementedException();
+           _guideDal.Update(t);
         }
     }
 }

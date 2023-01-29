@@ -33,7 +33,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void TRemove(int id)
+        public void TRemove(Testimonial t)
         {
             throw new NotImplementedException();
         }

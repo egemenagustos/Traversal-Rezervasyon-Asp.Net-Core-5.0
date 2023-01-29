@@ -48,7 +48,7 @@ namespace BusinessLayer.Concrete
            _reservationDal.Insert(t);
         }
 
-        public void TRemove(int id)
+        public void TRemove(Reservation t)
         {
             throw new NotImplementedException();
         }

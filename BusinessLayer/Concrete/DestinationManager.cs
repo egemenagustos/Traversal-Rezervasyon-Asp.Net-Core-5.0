@@ -30,17 +30,17 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Destination t)
         {
-            throw new NotImplementedException();
+            _destinationDal.Insert(t);
         }
 
-        public void TRemove(int id)
+        public void TRemove(Destination t)
         {
-            throw new NotImplementedException();
+            _destinationDal.Delete(t);
         }
 
         public void TUpdate(Destination t)
         {
-            throw new NotImplementedException();
+            _destinationDal.Update(t);
         }
     }
 }

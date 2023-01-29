@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IGenericService<T>
+    public interface IGenericService<T> where T: class, new()
     {
         void TAdd(T t);
 
-        void TRemove(int id);
+        void TRemove(T t);
 
         void TUpdate(T t);
 
