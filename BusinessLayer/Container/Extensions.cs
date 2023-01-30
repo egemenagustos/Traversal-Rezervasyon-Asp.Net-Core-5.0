@@ -30,6 +30,10 @@ namespace BusinessLayer.Container
 			services.AddScoped<IGuideService, GuidManager>();
 			services.AddScoped<IGuideDal, EfGuideDal>();
 
-		}
+            services.AddScoped<IExcelService, ExcelManager>();
+
+            services.AddScoped<IPdfService, PdfManager>();
+
+        }
     }
 }

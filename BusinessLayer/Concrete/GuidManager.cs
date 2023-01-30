@@ -33,6 +33,16 @@ namespace BusinessLayer.Concrete
             _guideDal.Insert(t);
         }
 
+        public void TChangeToFalse(int id)
+        {
+            _guideDal.ChangeToFalse(id);
+        }
+
+        public void TChangeToTrue(int id)
+        {
+            _guideDal.ChangeToTrue(id);
+        }
+
         public void TRemove(Guide t)
         {
             _guideDal.Delete(t);
