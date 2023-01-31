@@ -1,0 +1,42 @@
+﻿@using EntityLayer.Concrete
+@model List<ContactUs>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<div class="card">
+    <h5 class="card-header">Bize Ulaşın Mesajları</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Gönderen</th>
+                    <th>Konu</th>
+                    <th>Tarih</th>
+                    <th>Sil</th>
+                    <th>Mesajı Aç</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+                    sayac = sayac + 1;
+                    <tr>
+                        <td>@sayac</td>
+                        <td>@item.Name</td>
+                        <td>@item.Subject</td>
+                        <td>@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                        <td><a href="/Admin/Guide/ChangeToFalse/@item.ContactUsId" class="btn btn-sm btn-outline-danger">Sil</a></td>
+                        <td><a href="/Admin/Guide/ChangeToTrue/@item.ContactUsId" class="btn btn-sm btn-outline-success">Mesajı Aç</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
