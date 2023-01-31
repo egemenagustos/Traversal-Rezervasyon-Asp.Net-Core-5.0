@@ -50,6 +50,8 @@ namespace Traversal_Rezervasyon_Asp.Net_Core_5._0
             services.AddDbContext<Context>();
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
 
+            services.AddHttpClient();
+
             services.ContainerDependencies();
             services.CustomValidator();
 
