@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTOLayer.DTOs.AnnouncementDTOs
 {
-    public class AnnouncementAddDTOs
+    public class AnnouncementListDTO
     {
+        public int AnnouncementID { get; set; }
+
         public string Title { get; set; }
 
         public string Content { get; set; }

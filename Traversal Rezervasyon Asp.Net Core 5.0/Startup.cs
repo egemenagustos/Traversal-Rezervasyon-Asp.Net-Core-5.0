@@ -51,11 +51,9 @@ namespace Traversal_Rezervasyon_Asp.Net_Core_5._0
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
 
             services.ContainerDependencies();
-
+            services.CustomValidator();
 
             services.AddAutoMapper(typeof(Startup));
-
-            services.AddTransient<IValidator<AnnouncementAddDTOs>, AnnouncementValidator>();
 
             services.AddControllersWithViews().AddFluentValidation();
 
