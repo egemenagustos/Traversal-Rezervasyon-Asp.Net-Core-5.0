@@ -1,0 +1,41 @@
+﻿@model List<GetAllDestinationQueryResult>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Tur Rotası Listesi</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Şehir</th>
+                    <th>Gün - Gece</th>
+                    <th>Fiyat</th>
+                    <th>Kapasite</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.City</td>
+                        <td>@item.DayNight</td>
+                        <td>@item.Price</td>
+                        <td>@item.Capacity</td>
+                        <td><a href="/Admin/Guide/EditGuide/@item.Id" class="btn btn-sm btn-outline-danger">Sil</a></td>
+                        <td><a href="/Admin/Guide/EditGuide/@item.Id" class="btn btn-sm btn-outline-success">Güncelle</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<br />
+<a href="/Admin/Guide/AddGuide/" class="btn btn-sm btn-outline-primary">Yeni Tur Girişi</a>

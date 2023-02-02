@@ -24,6 +24,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Traversal_Rezervasyon_Asp.Net_Core_5._0.CQRS.Handlers.DestinationHandlers;
 using Traversal_Rezervasyon_Asp.Net_Core_5._0.Models;
 
 namespace Traversal_Rezervasyon_Asp.Net_Core_5._0
@@ -40,6 +41,8 @@ namespace Traversal_Rezervasyon_Asp.Net_Core_5._0
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<GetAllDestinationQueryHandler>();
+
             services.AddLogging(x =>
             {
                 x.ClearProviders();
