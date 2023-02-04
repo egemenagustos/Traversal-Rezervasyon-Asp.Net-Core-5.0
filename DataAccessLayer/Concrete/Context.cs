@@ -15,7 +15,6 @@ namespace DataAccessLayer.Concrete
         {
             optionsbuilder.UseSqlServer("server=EGEMEN\\SQLEXPRESS; database=TraversalDb; integrated security=true");
         }
-
         public DbSet<About> Abouts { get; set; }
 
         public DbSet<About2> About2s { get; set; }

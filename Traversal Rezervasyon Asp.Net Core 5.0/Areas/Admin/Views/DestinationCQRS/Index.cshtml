@@ -29,8 +29,8 @@
                         <td>@item.DayNight</td>
                         <td>@item.Price</td>
                         <td>@item.Capacity</td>
-                        <td><a href="/Admin/Guide/EditGuide/@item.Id" class="btn btn-sm btn-outline-danger">Sil</a></td>
-                        <td><a href="/Admin/Guide/EditGuide/@item.Id" class="btn btn-sm btn-outline-success">Güncelle</a></td>
+                        <td><a href="/Admin/DestinationCQRS/DeleteDestination/@item.Id" class="btn btn-sm btn-outline-danger">Sil</a></td>
+                        <td><a href="/Admin/DestinationCQRS/GetDestination/@item.Id" class="btn btn-sm btn-outline-success">Güncelle</a></td>
                     </tr>
                 }
             </tbody>
@@ -38,4 +38,4 @@
     </div>
 </div>
 <br />
-<a href="/Admin/Guide/AddGuide/" class="btn btn-sm btn-outline-primary">Yeni Tur Girişi</a>
+<a href="/Admin/DestinationCQRS/AddDestination/" class="btn btn-sm btn-outline-primary">Yeni Tur Girişi</a>

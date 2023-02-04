@@ -21,6 +21,7 @@ namespace Traversal_Rezervasyon_Asp.Net_Core_5._0.CQRS.Handlers.DestinationHandl
                 Id = values.DestinationID,
                 City = values.City,
                 DayNight = values.DayNight,
+                Price = values.Price
             };
         }
     }

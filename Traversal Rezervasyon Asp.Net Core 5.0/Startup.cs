@@ -42,6 +42,10 @@ namespace Traversal_Rezervasyon_Asp.Net_Core_5._0
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<GetAllDestinationQueryHandler>();
+            services.AddScoped<GetDestinationByIdQueryHandler>();
+            services.AddScoped<CreateDestinationCommandHandler>();
+            services.AddScoped<RemoveDestinationCommandHandler>();
+            services.AddScoped<UpdateDestinationCommandHandler>();
 
             services.AddLogging(x =>
             {
