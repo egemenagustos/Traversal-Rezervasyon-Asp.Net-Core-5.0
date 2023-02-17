@@ -9,6 +9,7 @@ using DTOLayer.DTOs.AnnouncementDTOs;
 using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,6 +47,8 @@ namespace Traversal_Rezervasyon_Asp.Net_Core_5._0
             services.AddScoped<CreateDestinationCommandHandler>();
             services.AddScoped<RemoveDestinationCommandHandler>();
             services.AddScoped<UpdateDestinationCommandHandler>();
+
+            services.AddMediatR(typeof(Startup));
 
             services.AddLogging(x =>
             {
